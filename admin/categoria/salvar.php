@@ -1,5 +1,15 @@
-<h3 class="text-primary">
-	Cadastrar Categoria
+<?php
+$id= filter_input(INPUT_GET,'id');
+//se não estiver com ID sera cadastrar
+$titulo = "Cadastrar";	
+//se estiver com ID sera editar
+	if (isset($id)) {
+		$titulo = "Editar";
+	}
+?>
+
+<h3 class="text-<?= $titulo == "Cadastrar" ? "primary" : "success" ?>">
+	<?=$titulo?> Categoria
 </h3>
 
 <div class="card shadow mt-3">

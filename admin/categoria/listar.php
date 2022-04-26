@@ -30,7 +30,7 @@
 						<?=$mostrar[1]?>
 					</td>
 					<td>
-						<a class="btn btn-primary">
+						<a class="btn btn-primary" href="?p=categoria/salvar&id=<?=$mostrar[0]?>">
 							<i class="bi bi-pencil-fill"></i>
 						</a>
 						<a class="btn btn-danger" style="color: #fff;" data-confirm="Excluir registro?" href="?p=categoria/excluir&id=<?=$mostrar[0]?>">
