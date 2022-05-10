@@ -1,3 +1,10 @@
+<?php
+session_start();
+if($_SESSION['acesso'] != 'admin'){
+	header("location: login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,6 +31,12 @@
 				<li class="nav-item">
 					<a class="nav-link" href="?p=categoria/listar">Categoria</a>
 				</li>
+
+					<li class="nav-item">
+					<a class="nav-link" href="?p=categoria/logout">Logout</a>
+				</li>
+
+				<div>
 			</ul>			
 		</div>
 	</nav>
@@ -44,6 +57,7 @@
 						<div class="alert alert-danger" role="alert">
 							<h1>Erro 404</h1>
 							<p>Página não encontrada</p>
+							<img src="../img/alerta.png">
 						</div>
 						<?php
 					}

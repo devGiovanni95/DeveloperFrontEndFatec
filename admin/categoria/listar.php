@@ -1,3 +1,10 @@
+<?php
+session_start();
+if($_SESSION['acesso'] != 'admin'){
+	header("location: login.php");
+}
+?>
+
 <h3 class="text-primary">
 	Listar de Categoria
 	<a href="?p=categoria/salvar" class="btn btn-success float-right">

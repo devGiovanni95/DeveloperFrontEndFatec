@@ -1,6 +1,12 @@
 <?php
+session_start();
+if($_SESSION['acesso'] != 'admin'){
+	header("location: login.php");
+}
+?>
 
-echo $id= filter_input(INPUT_GET,'id');
+<?php
+ $id= filter_input(INPUT_GET,'id');
 
 include_once'../class/Categoria.php';
 $cat = new Categoria();
